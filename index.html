@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#050507">
+  <meta name="description" content="CryptoSound — Enio Ferreira, São Paulo, Brazil.">
+  <meta property="og:title" content="CryptoSound — Psychedelic Frequencies">
+  <meta property="og:description" content="CryptoSound — Enio Ferreira, São Paulo, Brazil.">
+  <meta property="og:type" content="music.song">
+  <meta property="og:image" content="assets/images/cover.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="CryptoSound — Psychedelic Frequencies">
+  <meta name="twitter:description" content="CryptoSound — Enio Ferreira, São Paulo, Brazil.">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <title>CryptoSound — Psychedelic Frequencies</title>
+</head>
+<body data-state="idle">
+  <div class="cosmos" aria-hidden="true"></div>
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <main class="experience">
+    <header class="profile-header" aria-labelledby="artistName">
+      <div class="profile-photo">
+        <div class="portrait-halo"></div>
+        <img id="profileImage" src="assets/images/enio.jpg" alt="CryptoSound profile portrait">
+        <span class="portrait-ring"></span>
+      </div>
+      <div class="identity-copy">
+        <h1 id="artistName">CryptoSound</h1>
+        <p><span id="realName">Enio Ferreira</span><span id="location">São Paulo, Brazil</span></p>
+      </div>
+      <span class="header-frequency">PSYCHEDELIC FREQUENCIES</span>
+    </header>
+
+    <section class="transmission" aria-labelledby="trackTitle">
+      <div class="art-column">
+        <div class="art-halo" id="artHalo"></div>
+        <figure class="artwork">
+          <img id="coverImage" src="assets/images/cover.svg" alt="Track artwork">
+          <figcaption><span>CRYPTOSOUND</span><span>TRANSMISSION · 001</span></figcaption>
+        </figure>
+        <div class="frequency-badge"><i></i> FREQUENCY READY</div>
+      </div>
+
+      <div class="player-column">
+        <div class="track-heading">
+          <div><p class="overline">NOW TRANSMITTING</p><h2 id="trackTitle">Alinx Special 7</h2><p id="trackArtist">CryptoSound</p></div>
+          <button class="share-button" id="shareButton" type="button" aria-label="Share this track"><span>↗</span> SHARE</button>
+        </div>
+        <div class="wave-shell" id="waveShell">
+          <div class="loading-frequency" id="loadingText">Preparing frequency…</div>
+          <canvas id="waveform" aria-label="Interactive audio waveform" role="slider" tabindex="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></canvas>
+          <div class="playhead" id="playhead" aria-hidden="true"></div>
+          <div class="hover-time" id="hoverTime" aria-hidden="true">0:00</div>
+        </div>
+        <div class="time-row"><span id="currentTime">0:00</span><span class="state-label" id="stateLabel">IDLE</span><span id="duration">0:00</span></div>
+        <div class="controls">
+          <button class="play-button" id="playButton" type="button" aria-label="Alinys S2"><span class="play-icon"></span><span class="pause-icon"><i></i><i></i></span></button>
+          <div class="control-copy"><strong id="controlTitle">ENTER THE FREQUENCY</strong><span>Space · Play/Pause</span></div>
+          <div class="volume-control"><button id="muteButton" type="button" aria-label="Mute"><span class="speaker">◖</span><span class="sound-waves">))</span></button><input id="volume" type="range" min="0" max="1" step="0.01" value="0.82" aria-label="Volume"></div>
+        </div>
+        <div class="error-message" id="errorMessage" role="alert" hidden>Unable to load this transmission.<small>Check the audio file and try again.</small></div>
+      </div>
+    </section>
+
+    <section class="visual-finale" aria-label="CryptoSound visual frequency">
+      <div class="finale-copy"><p class="overline">END OF TRANSMISSION</p><h2>Stay inside<br>the frequency.</h2><span>CRYPTOSOUND · SÃO PAULO</span></div>
+      <div class="cosmic-orb" aria-hidden="true">
+        <div class="orb-axis axis-one"></div><div class="orb-axis axis-two"></div>
+        <div class="orb-core"><span>CS</span></div>
+        <i class="orb-dot dot-one"></i><i class="orb-dot dot-two"></i>
+        <span class="orb-label">SIGNAL · SÃO PAULO</span>
+      </div>
+    </section>
+
+    <footer><span>CS · 2026</span><span>ENIO FERREIRA · SÃO PAULO, BRAZIL</span><span>PSYCHEDELIC FREQUENCIES</span></footer>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite">Link copied</div>
+  <audio id="audio" preload="metadata" crossorigin="anonymous"></audio>
+  <script src="js/app.js" defer></script>
+</body>
+</html>
