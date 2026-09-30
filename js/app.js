@@ -5,7 +5,7 @@ const CONFIG = Object.freeze({
   location: "São Paulo, Brazil",
   profileImage: "assets/images/enio.jpg",
   track: Object.freeze({
-    title: "Alinx Special 7",
+    title: "Alinys Special Set",
     audio: "assets/audio/Alinx Special 7.mp3",
     peaks: "assets/audio/track-peaks.json",
     cover: "assets/images/cover.svg"
@@ -23,9 +23,7 @@ function getTrackTitleFromFilePath(path) {
 }
 
 const FILE_TRACK_TITLE = getTrackTitleFromFilePath(CONFIG.track.audio) || "Untitled transmission";
-const TRACK_TITLE = window.matchMedia("(max-width: 760px)").matches
-  ? FILE_TRACK_TITLE
-  : CONFIG.track.title.trim() || FILE_TRACK_TITLE;
+const TRACK_TITLE = CONFIG.track.title.trim() || FILE_TRACK_TITLE;
 
 const $ = (selector) => document.querySelector(selector);
 const audio = $("#audio");
